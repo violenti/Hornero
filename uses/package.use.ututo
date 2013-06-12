@@ -1,0 +1,223 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use,v 1.28 2011/04/10 23:02:57 flameeyes Exp $
+
+# Zac Medico <zmedico@gentoo.org> (04 Dec 2009)
+# Bug #295615 - Disable cxx by default, in order to avoid a die
+# in pkg_setup with default USE settings (cxx requires sasl).
+# net-nds/openldap -cxx
+
+# Doug Goldstein <cardoe@gentoo.org> (30 Aug 2010)
+# bug #332077 - Disable xcb backend by default for cairo-1.10. Its not
+# really prime time ready prior to cairo-1.10
+# <x11-libs/cairo-1.10 -xcb
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (11 Apr 2011)
+# Disable ldap support by default in sudo, as it seem to lack
+# developers maintaining that particular support and is, thus, vastly
+# untested.
+app-admin/sudo -ldap
+www-client/firefox alsa bindist custom-cflags custom-optimization dbus gstreamer ipc jit libnotify -minimal webm wifi
+www-client/icecat alsa bindist crashreporter dbus ipc webm custom-cflags custom-optimization -debug libnotify -pgo -startup-notification -system-sqlite wifi
+media-video/ffmpeg gpl -openssl -faac -aacplus X alsa bindist bzip2 encode hardcoded-tables mp3 oss qt-faststart sdl threads truetype vorbis zlib aac amr avx -cpudetection custom-cflags -debug -dirac -doc -faac -frei0r gsm ieee1394 -jack -jpeg2k network -pic -rtmp -schroedinger speex -static-libs -test theora v4l libv4l -vaapi vdpau vpx x264 xvid zlib
+virtual/ffmpeg X encode mp3 sdl threads -jpeg2k theora -vaapi vdpau x264 -openssl -faac -aacplus
+kde-base/kdelibs acl alsa bindist bzip2 handbook mmx nls openexr opengl policykit semantic-desktop ssl udev udisks upower -debug -doc -fam jpeg2k kerberos lzma spell -test upnp zeroconf
+kde-base/ksplash xinerama -debug
+kde-base/krdc handbook jpeg -debug rdesktop vnc zeroconf
+kde-base/okular crypt handbook jpeg pdf ps tiff chm -debug djvu ebook
+kde-base/solid bluetooth -debug networkmanager -wicd
+kde-base/pykde4 semantic-desktop -debug -doc -examples
+kde-base/kdebase-kioslaves bzip2 handbook openexr sftp -debug exif lzma samba
+kde-base/kopete addbookmarks autoreplace contactnotes handbook highlight history nowlistening pipes privacy ssl statistics texteffect translator urlpicpreview xmpp -debug gadu groupwise jingle latex meanwhile msn oscar otr qq skype sms testbed -v4l webpresence winpopup yahoo zeroconf
+kde-base/kdemultimedia-kioslaves handbook vorbis -debug encode flac
+kde-base/kinfocenter handbook opengl -debug ieee1394
+kde-base/marble handbook kde python -debug designer-plugin gps plasma -test
+kde-base/kdeartwork-kscreensaver eigen kexiv2 opengl -debug xscreensaver
+kde-base/kget handbook semantic-desktop sqlite webkit bittorrent -debug -mms
+app-misc/strigi dbus ffmpeg qt4 clucene -debug exif fam -hyperestraier inotify -test
+kde-base/kdepimlibs handbook semantic-desktop -debug ldap -test
+kde-base/gwenview kipi
+net-proxy/squid -mysql -postgres -samba
+net-dns/bind -mysql caps dlz -postgres
+mail-client/thunderbird alsa bindist crypt custom-cflags custom-optimization dbus ipc jit lightning minimal webm wifi
+x11-wm/compiz-fusion gnome kde emerald unsupported
+x11-wm/compiz cairo gnome gtk -kde svg -fuse -gconf
+app-office/libreoffice branding cups dbus gnome graphite gstreamer gtk java -kde opengl svg vba webdav xmlsec -aqua -binfilter -binfilterdebug -eds -jemalloc -mysql -odk -postgres -test -debug -gtk3 -kdeenablefinal nsplugin pdfimport
+kde-base/kde-meta X alsa gmp minizip declarative
+media-libs/mesa openvg pic gles xcb gbm
+net-libs/libproxy networkmanager
+net-misc/openssh X509 bindist
+sys-libs/pam -cracklib
+media-libs/phonon -vlc pulseaudio gstreamer
+app-text/ghostscript-gpl djvu jpeg2k
+media-libs/libsdl aalib directfb xv nas
+sys-power/pm-utils ntp
+x11-libs/gdk-pixbuf jpeg2k
+app-shells/bash afs bashlogger plugins mem-scramble
+dev-lang/perl ithreads
+dev-libs/nettle gmp
+sys-libs/zlib minizip
+sys-fs/udev hwdb gudev -kmod
+sys-auth/pambase -cracklib
+media-video/vlc a52 aac aalib avahi bluray cdda cddb dc1394 dts dvb flac gnutls -httpd ieee1394 jack libv4l2 live -xcb -lua matroska optimisememory pulseaudio rtsp sdl-image shout speex theora upnp vlm win32codecs wma-fixed x264 xosd -xv nsplugin ggi libv4l id3tag
+dev-libs/DirectFB X jpeg png sdl sse sysfs truetype zlib -debug -doc -fbcon -gif -static-libs v4l
+sys-apps/pciutils -zlib
+x11-libs/qt-sql -mysql -postgres
+sys-devel/gcc gcj cxx -nocxx graphite objc obcj++
+dev-libs/gmp cxx
+gnome-base/gnome-vfs acl ipv6 ssl avahi -doc fam gnutls kerberos samba -test
+sys-apps/shadow -cracklib
+app-mobilephone/obexd -server
+dev-python/PyQt4 declarative X dbus kde opengl phonon sql svg webkit -assistant -debug -doc -examples multimedia xmlpatterns
+media-libs/mediastreamer X alsa bindist ipv6 oss sdl speex amr -debug -examples gsm -ilbc jack -portaudio pulseaudio -static-libs theora v4l video x264
+x11-misc/obconf lxde
+net-misc/networkmanager avahi bluetooth connection-sharing dhclient -dhcpcd nss -gnutls introspection ppp resolvconf -wimax -doc
+media-plugins/gst-plugins-meta X alsa dvd ffmpeg mp3 mpeg ogg oss vorbis a52 aac dts dv dvb -esd flac lame mms -musepack -mythtv -pulseaudio taglib theora v4l vcd vpx -wavpack xv
+media-libs/libgphoto2 gd jpeg nls -doc -examples exif zeroconf
+media-libs/netpbm X jpeg png tiff xml zlib jbig jpeg2k rle svga
+net-print/cups X acl dbus jpeg pam perl png python ssl threads tiff -debug -gnutls java -kerberos ldap -php samba -slp -static-libs usb -xinetd
+x11-libs/cairo X glib opengl qt4 svg xcb -aqua -debug -directfb -doc drm gallium openvg -static-libs
+net-nds/openldap berkdb crypt ipv6 perl ssl tcpd -cxx -debug -experimental gnutls icu -iodbc kerberos -minimal -odbc -overlays samba sasl -selinux slp -smbkrb5passwd syslog
+sci-visualization/gnuplot X cairo gd readline -doc -emacs -examples ggi latex -lua plotutils -svga -thin-splines -wxwidgets -xemacs
+media-gfx/imagemagick X bzip2 fontconfig jpeg lcms openexr openmp perl png svg tiff truetype xml zlib -autotrace corefonts cxx -djvu fftw fpx -graphviz -gs -hdri -jbig jpeg2k -lqr lzma -opencl pango q32 -q64 -q8 -raw -static-libs webp wmf
+x11-misc/xscreensaver jpeg opengl pam xinerama new-login suid
+media-sound/sox alsa ffmpeg ogg openmp oss png sndfile -amr -ao -debug encode flac id3tag mad
+app-accessibility/espeak -portaudio pulseaudio
+net-dns/dnsmasq dbus dhcp ipv6 nls conntrack -idn tftp
+x11-base/xorg-server ipv6 kdrive nptl udev xorg dmx -doc -minimal -static-libs tslib xnest xvfb
+x11-base/xorg-drivers acecad aiptek elographics evdev fpit hyperpen joystick keyboard mouse mutouch penmount synaptics vmmouse void wacom tslib
+app-cdr/k3b dvd ffmpeg handbook sndfile vorbis wav -aqua -debug emovix encode flac -kdeenablefinal lame mad musepack -musicbrainz sox taglib vcd
+media-sound/pulseaudio X alsa asyncns bluetooth caps dbus glib gnome ipv6 orc tcpd udev avahi -doc equalizer jack libsamplerate -lirc realtime -system-wide -test
+net-libs/gtk-vnc gtk3
+sci-libs/hdf5 fortran szip -threads zlib -cxx -debug -examples -fortran2003 -mpi -static-libs
+media-video/mplayer -faac -amr -win32codecs
+dev-ruby/rubygems -doc -examples -ruby_targets_jruby -ruby_targets_ree18 ruby_targets_ruby18 -ruby_targets_ruby19
+dev-ruby/daemons -doc -examples -ruby_targets_jruby -ruby_targets_ree18 ruby_targets_ruby18 -ruby_targets_ruby19
+media-libs/libpng  static-libs
+media-libs/freetype  static-libs
+media-libs/lcms  static-libs
+app-text/fbreader -gtk qt4 -debug
+gnome-base/gvfs cdda udisks
+net-misc/rsync xattr
+dev-ruby/builder ruby_targets_ruby18
+dev-libs/libxml2 icu ipv6 python readline
+dev-libs/popt static-libs
+dev-libs/libgcrypt static-libs
+dev-libs/libgpg-error static-libs
+dev-util/kdevplatform subversion
+app-text/poppler cxx
+gnome-base/gnome accessibility cups mono policykit cdr dvdr ldap
+media-libs/libgnome-media-profiles mp3 vorbis aac flac speex twolame
+app-cdr/brasero  css introspection libburn mp3 -doc nautilus -packagekit playlist -test tracker
+www-client/epiphany introspection networkmanager nss avahi -debug -doc -test
+net-misc/vino crypt ipv6 jpeg ssl telepathy zlib avahi -debug gnome-keyring libnotify networkmanager
+gnome-base/gnome-applets gnome ipv6 policykit networkmanager
+net-misc/vino crypt ipv6 jpeg ssl telepathy zlib avahi -debug gnome-keyring libnotify networkmanager
+app-crypt/seahorse avahi -debug -doc ldap -test
+gnome-base/gnome-panel bonobo introspection -doc -eds networkmanager
+gnome-base/gvfs bluetooth cdda gdu http udev -afp -archive avahi bluray -doc fuse -gnome-keyring gphoto2 ios samba
+net-libs/webkit-gtk  gstreamer introspection jit coverage -debug -doc spell -test webgl
+net-im/telepathy-mission-control upower gnome-keyring networkmanager
+app-mobilephone/obexd server -eds nokia usb
+sys-apps/gnome-disk-utility avahi -doc fat gnome-keyring nautilus remote-access
+app-text/evince dbus introspection tiff -debug djvu -doc dvi gnome-keyring nautilus t1lib xps
+dev-libs/elfutils bzip2 nls zlib lzma static-libs
+sys-apps/pciutils zlib network-cron
+sys-fs/udisks remote-access
+net-dns/avahi gtk3 -gdbm
+media-libs/clutter introspection -debug -doc gtk opengl
+dev-libs/libgweather introspection -doc python
+gnome-base/gnome-panel introspection networkmanager -doc -eds bonobo
+gnome-extra/gnome-power-manager -test applet policykit
+dev-libs/lzo static-libs
+app-office/akonadi-server -mysql
+x11-libs/qt-sql -mysql
+app-admin/apg -cracklib
+net-wireless/wpa_supplicant wimax dbus qt4 readline -ssl wimax -debug eap-sim -fasteap -gnutls -madwifi wps
+net-libs/opal audio ffmpeg h323 ipv6 plugins sip ssl video wav xml -capi celt -debug -doc dtmf -examples fax h224 h281 iax -ilbc ivr ixj -java ldap -lid -sbc sipim srtp -static-libs -stats swig theora -vpb vxml x264 x264-static
+net-voip/ekiga dbus gnome gstreamer h323 -kde mmx nls shm -aqua avahi -debug -doc -eds gconf -kontact ldap libnotify -static v4l xcap xv
+net-libs/ptlib http vxml dtmf jabber qos snmp telnet tts xmlrpc v4l2 ieee1394
+dev-util/anjuta  introspection -debug -devhelp -doc glade -graphviz -packagekit subversion -test -vala sourceview
+app-editors/scite lua
+dev-vcs/subversion -dso java
+dev-ruby/rdoc ruby_targets_ruby19
+dev-ruby/racc ruby_targets_ruby19
+dev-ruby/json ruby_targets_ruby19
+dev-ruby/rake ruby_targets_ruby19
+dev-ruby/rubygems ruby_targets_ruby19
+app-office/lyx X aspell cups hunspell latex nls svg -debug dia -docbook -dot enchant gnumeric html luatex monolithic-build -rcs rtf subversion -xetex
+dev-embedded/arduino java
+app-office/calligra crypt eigen exif fontconfig gif glib gsf handbook iconv jpeg kdcraw lcms mso okular openexr opengl pdf semantic-desktop ssl threads tiff truetype wmf xml xslt -aqua -attica -fftw -freetds -glew -gsl jpeg2k kdepim -marble -mysql -openctl -postgres -sybase -test -word-perfect -xbase
+dev-java/icedtea-bin X alsa -cjk -doc -examples nsplugin -source
+app-misc/freemind svg -doc -groovy latex pdf
+media-gfx/inkscape gnome lcms nls -debug -dia -gs -inkjar -spell -wmf
+net-misc/italc X crypt threads xinerama -fbcon system-libvncserver v4l
+x11-libs/libX11 xcb
+www-servers/cherokee ffmpeg ipv6 nls pam ssl admin coverpage -debug geoip -ldap mysql php rrdtool -static -static-libs fpm
+net-misc/aria2 nls sqlite ssl -ares bittorrent -doc -expat -gnutls metalink -scripts -test -xmlrpc
+app-backup/amanda ipv6 nls readline curl gnuplot -kerberos -minimal -s3 samba -xfs
+app-admin/testdisk jpeg ntfs reiserfs -static
+www-client/seamonkey alsa chatzilla crypt dbus ipc roaming webm custom-cflags custom-optimization -debug libnotify -startup-notification -system-sqlite wifi
+app-forensics/afflib ncurses python readline threads fuse qemu s3 -static-libs
+app-forensics/aide acl nls zlib audit curl mhash -postgres prelink -selinux -static xattr
+app-forensics/sleuthkit aff ewf -static-libs
+app-forensics/openscap perl python sql -bash-completion -doc nss rpm
+app-forensics/ovaldi -ldap rpm
+app-forensics/rdd gtk -debug rawio
+media-video/2mandvd -debug mad xine
+media-plugins/alsa-plugins pulseaudio
+net-im/pidgin dbus gstreamer gtk ncurses nls perl python tk xscreensaver -debug -doc -eds gadu gnutls groupwise -idn meanwhile networkmanager prediction sasl silc spell tcl zephyr zeroconf
+net-p2p/amule upnp stats
+www-client/chromium bindist cups gnome custom-cflags gnome-keyring -kerberos -pulseaudio -test
+media-gfx/digikam handbook semantic-desktop thumbnails -addressbook -aqua -debug -doc gphoto2 -mysql -themedesigner video
+media-gfx/eog exif introspection jpeg lcms svg tiff -debug -doc xmp
+media-gfx/gimp alsa bzip2 dbus gnome jpeg lcms mmx mng png python sse svg tiff udev webkit aalib -altivec curl -debug -doc exif -gs jpeg2k pdf smp wmf -xpm hal
+media-sound/mumble alsa dbus oss pch -debug -g15 -portaudio -pulseaudio speech zeroconf
+x11-wm/openbox nls session -debug -imlib startup-notification
+app-office/scribus cairo minimal pdf -debug examples spell templates
+net-p2p/transmission gtk qt4 -ayatana lightweight xfs
+media-gfx/xsane jpeg lcms nls png tiff gimp ocr
+net-misc/networkmanager avahi bluetooth connection-sharing dhclient introspection nss ppp resolvconf -dhcpcd -doc -gnutls modemmanager -systemd wext wimax
+app-office/abiword cups gnome plugins readline collab -debug grammar latex math openxml ots spell thesaurus wmf wordperfect
+media-sound/amarok -embedded opengl semantic-desktop utils cdda daap -debug ipod lastfm mp3tunes mtp ofa kdeenablefinal player
+media-sound/audacity alsa ffmpeg mp3 vorbis flac id3tag -jack ladspa libsamplerate midi -soundtouch twolame vamp
+media-video/avidemux alsa gtk mp3 nls opengl oss qt4 sdl truetype vorbis x264 xv xvid aac -aften -amr -jack -pulseaudio vpx
+media-sound/banshee aac bpm cdda encode udev web boo daap -doc ios karma mtp -test youtube ipod podcast wikipedia
+media-video/cinelerra alsa mmx opengl oss -altivec css ieee1394
+media-sound/darkice alsa mp3 vorbis aac -jack libsamplerate twolame
+media-video/dvdrip ffmpeg ogg vorbis fping mplayer subtitles vcd xine xvid
+net-im/emesene jabber
+app-cdr/gnomebaker mp3 vorbis dvdr flac libnotify -debug nls
+app-editors/gobby gnome avahi
+net-libs/obby ipv6 nls avahi
+sys-block/gparted btrfs dmraid fat gtk hfs jfs kde ntfs reiser4 reiserfs xfs mdadm
+media-video/kino alsa gstreamer vorbis dvdr -gpac lame quicktime sox
+media-video/pitivi -test v4l
+sys-fs/squashfs-tools xz lzma lzo -xattr gzip
+app-emulation/wine X alsa cups fontconfig gecko gstreamer hardened jpeg lcms mp3 ncurses nls opengl oss perl png ssl threads truetype win32 xinerama xml -capi custom-cflags -gnutls -gphoto2 -gsm -ldap -odbc -openal -opencl -samba scanner -test udisks v4l xcomposite
+net-analyzer/wireshark caps gtk ipv6 pcap python ssl threads zlib adns ares -doc -doc-pdf gcrypt geoip -kerberos -lua -portaudio -profile -selinux smi
+app-emulation/virtualbox alsa extensions opengl pam python qt4 sdk -doc -headless -java -pulseaudio -vboxwebsrv vnc
+sys-boot/grub ncurses custom-cflags netboot static
+sys-boot/lilo -device-mapper -minimal -pxeserial -static
+games-strategy/warzone2100 nls -debug videos
+x11-libs/qt-webkit icu
+dev-java/swing-layout source
+app-text/djview -debug nsplugin
+sci-mathematics/scilab gtk -Xaw3d examples -java ocaml
+media-sound/clementine dbus kde udev cdda ios ipod lastfm -mms -mtp projectm wiimote
+app-text/gscan2pdf xdg -adf -cuneiform djvu -doc gocr -ocropus -tesseract -unpaper
+net-misc/csync samba
+dev-lang/php curl pdo sqlite3 xmlwriter zip calendar xmlrpc xmlreader imap intl ldap postgres mysql xpm sockets
+dev-db/mysql berkdb community -embedded perl ssl big-tables cluster -debug extraengine -latin1 -max-idx-128 -minimal -pbxt -profiling -static xtradb
+app-emulation/libvirt caps libvirtd lxc macvtap nls policykit python udev vepa -audit avahi -debug iscsi lvm nfs numa openvz parted pcap -phyp qemu -rbd -sasl uml virt-network -virtualbox -xen
+app-emulation/qemu aio alsa bluetooth caps curl jpeg ncurses opengl png python sdl threads uuid vhost-net vnc -xen -brltty -debug -doc -fdt -mixemu -pulseaudio -rbd -sasl -smartcard -spice -static -systemtap -tci -tls -usbredir vde virtfs xattr xfs qemu_softmmu_targets_i386 qemu_softmmu_targets_x86_64 qemu_softmmu_targets_alpha qemu_softmmu_targets_arm qemu_softmmu_targets_cris qemu_softmmu_targets_m68k qemu_softmmu_targets_microblaze qemu_softmmu_targets_microblazeel qemu_softmmu_targets_mips qemu_softmmu_targets_mipsel qemu_softmmu_targets_ppc qemu_softmmu_targets_ppc64 qemu_softmmu_targets_sh4 qemu_softmmu_targets_sh4eb qemu_softmmu_targets_sparc qemu_softmmu_targets_sparc64 qemu_softmmu_targets_s390x qemu_softmmu_targets_lm32 qemu_softmmu_targets_mips64 qemu_softmmu_targets_mips64el qemu_softmmu_targets_ppcemb qemu_softmmu_targets_xtensa qemu_softmmu_targets_xtensaeb
+net-im/gajim X crypt dbus gnome kde nls srv avahi idle jingle -libnotify -networkmanager spell xhtml
+www-apps/trac sqlite -cgi fastcgi i18n mysql postgres subversion -vhosts
+sys-apps/portage python2 python3
+dev-db/mariadb berkdb community embedded perl ssl cluster -debug extraengine -jemalloc -latin1 -max-idx-128 -minimal oqgraph pbxt profiling -sphinx -static -systemtap -tcmalloc
+app-office/libreoffice-bin cups gnome java -kde -debug
+dev-cpp/glog gflags
+dev-libs/openssl -bindist
+net-libs/libgadu gnutls
+dev-qt/qtwebkit icu
+sys-apps/kmod tools zlib -debug -doc lzma -static-libs

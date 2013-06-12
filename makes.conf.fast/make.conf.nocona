@@ -1,0 +1,70 @@
+# Generic /etc/make.conf for INTEL Xeon64 Processor
+#
+# Contains local system settings for Portage system
+# Please review 'man make.conf' for more information.
+# 
+# Copyright (C) 2006 - 2008 The UTUTO Project
+# Distributed under the terms of the GNU General Public License v3
+# 
+
+ACCEPT_KEYWORDS = "~x86"
+
+ALSA_CARDS="aica asihpi darla20 darla24 echo3g emi26 emu1212 emu1616 emu1820 gina20 gina24 hdsp hdspm indigo indigoio korg1212 layla20 layla24 maestro3 mia mixart mona msnd-pinnacle pcxhr sb16 usb-usx2y vx222 wavefront ymfpci"
+
+AUTOCLEAN = "yes"
+
+CCACHE_SIZE = "8G"
+
+CHOST="i686-pc-linux-gnu"
+
+CFLAGS="-march=core2 -Ofast -m32 -flto -pipe -mmmx -msse -msse2 -mssse3 -fomit-frame-pointer -mpc80 -maccumulate-outgoing-args -mno-push-args -mno-align-stringops -minline-all-stringops"
+
+CXXFLAGS = "${CFLAGS}"
+
+#FEATURES = "ccache confcache digest fixpackages metadata-transfer prelink sandbox"
+FEATURES = "ccache"
+
+COLLISION_IGNORE="/usr/share/doc/kde /usr/kde /usr /lib /etc/init.d /etc/udev /etc/xdg /etc/pam.d /etc/dbus-1 /etc/hotplug /sbin /etc/env.d /etc/gconf/schemas"
+
+LINGUAS = "es_ES es_AR es en fr it de pl ru pt pt_BR"
+
+MAKEOPTS = "-j5"
+
+PKGDIR = "/usr/portage/packages"
+
+PORT_LOGDIR = "/var/log/portage"
+
+USE = "berkdb -kdeprefix ccache hal pch alsa threads crypt hardened ipv6 mmx mmxext sse sse2 sse3 ssse3 ncurses nls nptl ntplonly glibc-omitfp pam perl python readline sse sse2 ssl tcpd unicode zlib xinerama ffmpeg networking dbus glitz oss tk dvdread jpeg accessibility X sdl -mysql opengl mdnsresponder-compat embedded png immqt-bc webkit xcb custom-flags phonon lcms dvd mp3 mpeg ogg vorbis jadetex cairo wav consolekit gnome gtk semantic-desktop discouraged qt3support mng svg xml openexr tiff kde melt extras h323 sip autoipd aspell romio kdrive qt4 sql gstreamer bindist gd-external mikmod openssl sqlite fts3 policykit extensions sndfile secure-delete gdu device-mapper introspection sndfile apache2 enca szip gd -gd-external extensions fontconfig truetype ftp mysqli mono kpathsea reports weather mssql firebird video_cards_vmware apng udev cairo introspection bluetooth hwdb gudev script theora dconf vala eds"
+
+SYNC = "rsync://rsync.ututo.org/portage"
+
+VIDEO_CARDS="intel mach64 mga none r128 radeon s3virge savage sis tdfx trident via vesa apm ark chips cirrus cyrix dummy epson fbdev geode glint i128 i740 i810 imstt mach64 mga neomagic nsc nv r128 radeon rendition s3 s3virge savage siliconmotion sis sisusb tdfx tga trident tseng v4l vermilion vga via voodoo xgi virtualbox"
+  
+INPUT_DEVICES="joystick keyboard mouse acecad aiptek digitaledge dmc dynapro elo2300 elographics evdev fpit hyperpen jamstudio magellan microtouch mutouch palmax penmount spaceorb summa synaptics tek4957 ur98 vmmouse void wacom virtualbox tslib"
+
+ALSA_PCM_PLUGINS="adpcm alaw asym copy dmix dshare dsnoop empty extplug file hooks iec958 ioplug ladspa lfloat linear meter mmap_emul mulaw multi null plug rate route share shm softvol"
+
+APACHE2_MODULES="actions alias auth_basic authn_alias authn_anon authn_dbm authn_default authn_file authz_dbm authz_default authz_groupfile authz_host authz_owner authz_user autoindex cache dav dav_fs dav_lock deflate dir disk_cache env expires ext_filter file_cache filter headers include info log_config logio mem_cache mime mime_magic negotiation rewrite setenvif speling status unique_id userdir usertrack vhost_alias ident imagemap log_forensic proxy proxy_ajp proxy_balancer proxy_connect proxy_ftp proxy_http substitute version"
+APACHE2_MPMS="worker"
+
+CAMERAS="adc65 agfa_cl20 aox ax203 barbie canon casio_qv clicksmart310 digigr8 digita dimagev dimera3500 directory enigma13 fuji gsmart300 hp215 iclick jamcam jd11 jl2005a jl2005c kodak_dc120 kodak_dc210 kodak_dc240 kodak_dc3200 kodak_ez200 konica konica_qm150 largan lg_gsm mars mustek panasonic_coolshot panasonic_dc1000 panasonic_dc1580 panasonic_l859 pccam300 pccam600 polaroid_pdc320 polaroid_pdc640 polaroid_pdc700 ptp2 ricoh ricoh_g3 samsung sierra sipix_blink sipix_blink2 sipix_web2 smal sonix sony_dscf1 sony_dscf55 soundvision spca50x sq905 st2205 stv0674 stv0680 sx330z template topfield toshiba_pdrm11"
+
+GENTOO_MIRRORS="ftp://gentoo.bloodhost.ru/ ftp://mirror.qubenet.net/mirror/gentoo/ ftp://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo"
+
+PORTDIR_OVERLAY="
+/var/lib/layman/enlightenment
+/var/lib/layman/gnome
+/var/lib/layman/multimedia
+/var/lib/layman/rox
+/var/lib/layman/sunrise
+/var/lib/layman/sabayon
+/var/lib/layman/voip
+/var/lib/layman/sugar
+/var/lib/layman/lxde
+/var/lib/layman/mozilla
+$PORTDIR_OVERLAY
+"
+PORTAGE_NICENESS="-5"
+
+PYTHON_TARGETS="python2_7 python3_2 python2_6 python3_1 python3_2 python3_3"
+USE_PYTHON='2.6 2.7 3.1 3.2'

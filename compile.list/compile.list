@@ -1,0 +1,65 @@
+[ebuild  N     ] sys-devel/autoconf-wrapper-13  0 kB
+[ebuild  N     ] dev-util/btyacc-3.0-r2  0 kB
+[ebuild  N     ] app-text/sgml-common-0.6.3-r5  0 kB
+[ebuild  N     ] virtual/yacc-0  0 kB
+[ebuild  N     ] dev-libs/libedit-20120311.3.0-r1  USE="static-libs" 0 kB
+[ebuild  N     ] dev-util/pkgconfig-0.28  USE="hardened -internal-glib" 0 kB
+[ebuild  N     ] virtual/pkgconfig-0  0 kB
+[ebuild  N     ] sys-devel/autoconf-2.69:2.5  USE="-emacs -multislot" 0 kB
+[ebuild  N     ] dev-util/gtk-doc-am-1.19  0 kB
+[ebuild  N     ] dev-util/cmake-2.8.10.2-r2  USE="ncurses -emacs -qt4 {-test} -vim-syntax" 0 kB
+[ebuild  N     ] app-admin/eselect-qtgraphicssystem-1.1.1  0 kB
+[ebuild  N     ] media-libs/libexif-0.6.21-r1  USE="nls static-libs -doc" 0 kB
+[ebuild  N     ] dev-perl/Locale-gettext-1.50.0  0 kB
+[ebuild  N     ] sys-apps/help2man-1.42.1  USE="nls" 0 kB
+[ebuild  N     ] sys-devel/automake-1.13.2:1.13  0 kB
+[ebuild  N     ] sys-devel/automake-1.11.6:1.11  0 kB
+[ebuild  N     ] dev-lang/tcl-8.6.0-r1:0/8.6  USE="threads -debug" 0 kB
+[ebuild  N     ] media-fonts/font-util-1.3.0  0 kB
+[ebuild  N     ] dev-db/firebird-2.5.2.26539.0  USE="(-client) -debug -doc -examples -superserver -xinetd" 0 kB
+[ebuild  N     ] x11-proto/scrnsaverproto-1.2.2-r1  USE="-doc" 0 kB
+[ebuild  NS    ] sys-libs/db-4.7.25_p4:4.7 [4.8.30:4.8] USE="cxx -doc -examples -java -rpc -tcl {-test}" 12,835 kB
+[ebuild  NS    ] sys-libs/db-4.5.20_p2-r1:4.5 [4.8.30:4.8] USE="cxx -doc -examples -java -rpc -tcl {-test}" 0 kB
+[ebuild  N     ] dev-scheme/guile-1.8.8-r1:12  USE="deprecated discouraged networking nls regex threads -debug -debug-freelist -debug-malloc -emacs" 3,864 kB
+[ebuild  N     ] x11-libs/libXScrnSaver-1.2.2-r1  USE="static-libs" 0 kB
+[ebuild  N     ] sys-devel/autogen-5.17.4  USE="static-libs -libopts" 980 kB
+[ebuild  N     ] dev-tcltk/expect-5.45  USE="threads -debug -doc" 615 kB
+[ebuild  N     ] dev-util/dejagnu-1.5  USE="-doc" 563 kB
+[ebuild  N     ] sys-devel/gcc-4.7.3:4.7  USE="cxx fortran gcj graphite mudflap nls nptl objc objc++ objc-gc openmp regression-test (-altivec) -doc (-fixed-point) -go -gtk (-hardened) (-libssp) -lto (-multilib) -multislot -nopie -nossp -vanilla" 0 kB
+[ebuild  N     ] dev-qt/qtcore-4.8.4-r5:4  USE="exceptions glib iconv pch qt3support ssl (-aqua) -c++0x -debug -icu" 0 kB
+[ebuild  N     ] dev-qt/qtscript-4.8.4:4  USE="exceptions iconv jit pch (-aqua) -c++0x -debug" 0 kB
+[ebuild  N     ] dev-qt/qtsql-4.8.4:4  USE="exceptions firebird pch qt3support sqlite (-aqua) -c++0x -debug -freetds -mysql -oci8 -odbc -postgres" 0 kB
+[ebuild  N     ] dev-qt/qtdbus-4.8.4:4  USE="exceptions pch (-aqua) -c++0x -debug" 0 kB
+[ebuild  N     ] dev-qt/qtgui-4.8.4-r1:4  USE="accessibility cups dbus exceptions gif glib mng pch qt3support tiff xinerama xv (-aqua) -c++0x -debug -egl -gtkstyle -nas -nis -trace" 0 kB
+[ebuild  N     ] dev-qt/qt3support-4.8.4:4  USE="accessibility exceptions pch (-aqua) -c++0x -debug" 0 kB
+[ebuild  N     ] app-accessibility/at-spi2-core-2.6.3:2  USE="introspection" 0 kB
+[ebuild  N     ] media-libs/giflib-4.1.6-r2  USE="X static-libs -rle" 0 kB
+[ebuild  N     ] app-accessibility/at-spi2-atk-2.6.2:2  USE="{-test}" 0 kB
+[ebuild  NS    ] app-text/docbook-xml-dtd-4.1.2-r6:4.1.2 [4.2-r2:4.2] 0 kB
+[ebuild  N     ] x11-apps/mkfontscale-1.1.0  0 kB
+[ebuild  N     ] x11-apps/mkfontdir-1.0.7  0 kB
+[ebuild  N     ] media-fonts/encodings-1.0.4  0 kB
+[ebuild  N     ] dev-lang/tk-8.6.0:0/8.6  USE="threads truetype (-aqua) -debug {-test} -xscreensaver" 0 kB
+[ebuild  NS    ] dev-lang/python-2.5.4-r5:2.5 [2.7.3-r3:2.7] USE="berkdb gdbm hardened ipv6 ncurses readline sqlite ssl threads tk (wide-unicode) xml -build -doc -examples -wininst" 0 kB
+[ebuild  N     ] dev-tcltk/blt-2.4z-r12  USE="X jpeg static-libs" 0 kB
+[ebuild  NS    ] dev-lang/python-2.6.8-r1:2.6 [2.7.3-r3:2.7] USE="berkdb gdbm hardened ipv6 ncurses readline sqlite ssl threads tk (wide-unicode) xml -build -doc -examples -wininst" 0 kB
+[ebuild  N     ] app-text/poppler-0.22.4:0/37  USE="cairo cxx introspection jpeg lcms png qt4 tiff utils -cjk -curl -debug -doc -jpeg2k" 0 kB
+[ebuild  N     ] dev-dotnet/libgdiplus-2.10.9  USE="cairo" 0 kB
+[ebuild  N     ] dev-lang/mono-3.0.7  USE="-doc -minimal -pax_kernel -xen" 0 kB
+[ebuild  NS    ] x11-libs/gtk+-3.6.3-r2:3 [2.24.17:2] USE="X cups introspection xinerama (-aqua) -colord -debug (-egl) -examples (-packagekit) {-test} -vim-syntax (-wayland)" 0 kB
+[ebuild  N     ] net-dns/avahi-0.6.31-r2  USE="autoipd dbus gdbm gtk3 howl-compat introspection ipv6 mdnsresponder-compat mono python -bookmarks -doc -gtk -qt4 {-test} -utils" PYTHON_TARGETS="python2_5 python2_6 python2_7" 0 kB
+[ebuild  N     ] gnome-base/gconf-3.2.6-r1:2  USE="gtk introspection ldap policykit -debug -orbit" PYTHON_TARGETS="python2_5 python2_6 python2_7" 0 kB
+[ebuild  N     ] www-client/google-chrome-28.0.1500.36_beta204086:beta  USE="plugins" LINGUAS="de es fr it pl pt_BR ru -am -ar -bg -bn -ca -cs -da -el -en_GB -es_LA -et -fa -fi -fil -gu -he -hi -hr -hu -id -ja -kn -ko -lt -lv -ml -mr -ms -nb -nl -pt_PT -ro -sk -sl -sr -sv -sw -ta -te -th -tr -uk -vi -zh_CN -zh_TW" 40,021 kB
+[ebuild  N     ] sys-devel/autoconf-wrapper-13  0 kB
+[ebuild  N     ] dev-util/pkgconfig-0.28  USE="hardened -internal-glib" 0 kB
+[ebuild  N     ] virtual/pkgconfig-0  0 kB
+[ebuild  N     ] sys-devel/autoconf-2.69:2.5  USE="-emacs -multislot" 0 kB
+[ebuild  N     ] dev-perl/Locale-gettext-1.50.0  0 kB
+[ebuild  N     ] sys-apps/help2man-1.42.1  USE="nls" 0 kB
+[ebuild  N     ] sys-devel/automake-1.13.2:1.13  0 kB
+[ebuild  N     ] media-fonts/font-util-1.3.0  0 kB
+[ebuild     U  ] app-editors/vim-core-7.3.931 [7.3.762] USE="acl nls -livecd" 0 kB
+[ebuild     U  ] app-editors/vim-7.3.931 [7.3.762] USE="X acl cscope gpm nls perl python vim-pager -debug -minimal -ruby" PYTHON_SINGLE_TARGET="python2_7%* -python2_5% -python2_6% -python3_1% -python3_2% -python3_3%" PYTHON_TARGETS="python2_5%* python2_6%* python2_7%* -python3_1% -python3_2% -python3_3%" 0 kB
+[ebuild  N     ] x11-apps/mkfontscale-1.1.0  0 kB
+[ebuild  N     ] x11-apps/mkfontdir-1.0.7  0 kB
+[ebuild  N     ] media-fonts/encodings-1.0.4  0 kB
