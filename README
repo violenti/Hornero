@@ -1,0 +1,13 @@
+Debe tener instalado portage y actualizado, ejecute emerge-webrsync o emerge --sync. Para continuar verifique que tenga instalado gcc en su ultima version.
+Para seleccionar los paquetes a compilar edite el archivo "compile.list/compile.list.pkg", que se encuentra dentro del directorio /Hornero, añadiendo en este el los paquetes que se van a compilar en la misma linea y dejando un espacio entre los nombres. Si usted no sabe el nombre del paquete correctamente ejecute 'emerge --search kde' (sustituya kde por el nombre del ebuild correspondiente).
+
+Para iniciar ejecute el script "00-compile-list.sh", que esta dentro del directorio /Hornero. Este script buscara las dependencias y creara los scripts para compilar los paquetes. Seran creados dentro de "compile.list" conteniendo el nombre del paquete como final del nombre del archivo. Un "compile.list.XXXXX" por cada paquete a compilar.
+Una vez ejecutado "00-compile-list.sh" ejecute "01-compile-i686.sh", este crea los paquetes binarios para cada arquitectura, una vez finalizada la compilacion en una arquitectura, pasa a la siguiente arquitectura y asi sucesivamente. Los paquetes binarios seran depositados en el directorio "packages", creando un subdirectorio con el nombre de la arquitectura. El programa  se detendra una vez finalizado o si da errores durante la compilacion.
+
+Los errrores pueden ser por varios motivos, lea los mensajes devueltos por el compilador. Consulte la documentación sobre [portage:http://www.gentoo.org/doc/es/handbook/handbook-x86.xml?part=2&chap=1]
+
+Terminado el paso de compilacion ejecute "02-busca-deps.sh", para crear los pre-archivos para uget para cada paquete con sus dependencias que se crearan en el directorio "scripts". FInalizado la busqueda de dependencia ejecute "04-crea-uget.sh" para crear los archivos de paquetes-recetas para Uget.
+
+Para finalizar y hacer un backup de lo compilado ejecute "04-fin-kit-proceso.sh".
+
+
